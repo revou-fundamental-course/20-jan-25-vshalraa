@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css\styles.css">
+    <script defer src="js\script.js"></script>
+</head>
+
+<body>
+    <header class="judulawal">
+        <h1 style="text-align: center;">Kalkulator BMI</h1>
+    </header>
+
+    <main>
+            <!-- Introduction -->
+            <article class="introduction">
+                <p style="text-align: justify;">Berat badan ideal adalah impian semua orang. 
+                  Tidak hanya memiliki bentuk tubuh yang menunjang penampilan,
+                  berat badan ideal juga menandakan kondisi tubuh yang sehat. 
+                  Salah satu cara yang mudah untuk mengetahui apakah berat badan 
+                  berada pada kisaran yang sehat adalah dengan menggunakan 
+                  kalkulator BMI (Body Mass Index). Bagaimana denganmu?</p> 
+            </article>
+
+            <!-- Feature Information -->
+            <h2 class="subjudul" style="text-align: center;">Feature Information</h2>
+            <article class="feature">
+                <header>
+                    <h3 style="margin: 5px;">Keunggulan Fitur</h3>
+                </header>
+                <ol style="margin: 0;">
+                    <li>Menghitung berat badan</li>
+                    <li>Memberikan indikasi umum tentang status berat badan seseorang</li>
+                    <li>Memantau risiko terhadap penyakit terkait berat badan</li>
+                </ol> 
+                <p style="text-align: justify;">Kalkulator ini hanya ditujukan untuk orang dewasa.
+                   Wanita hamil atau menyusui sebaiknya tidak menggunakan 
+                   hasil BMI ini sebagai acuan. Pastikan untuk tidak mengambil 
+                   tindakan apa pun berdasarkan nilai BMI tanpa berkonsultasi 
+                   terlebih dahulu dengan tenaga medis yang berkompeten seperti dokter, ya!</p>
+                <p style="text-align: justify;">Kalkultor akan memberi Anda gambaran tentang perbandingan 
+                   berat badan Anda dengan nilai umum. Indeks Massa Tubuh (BMI) 
+                   dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan 
+                   kuadrat tinggi badan Anda (dalam meter) atau BMI = Kg/M<sup>2</sup>.</p>
+            </article>
+
+            <!-- Form -->
+            <h2 class="subjudul" style="text-align: center;">Yuk, Cek BMI kamu sekarang!</h2>
+            <form class="form">
+                <div class="form-grup">
+                    <label>Jenis Kelamin</label><br>
+                    <input type="radio" name="gender" value="Pria"> Pria
+                    <input type="radio" name="gender" value="Wanita"> Wanita
+                </div>
+                <div class="form-group">
+                    <label for="input-berat-badan">Berat Badan (kg)</label>
+                    <input type="number" id="input-berat-badan" name="input-berat-badan" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="input-usia">Usia (tahun)</label>
+                    <input type="number" id="input-usia" name="input-usia" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="input-tinggi-badan">Tinggi Badan (cm)</label>
+                    <input type="number" id="input-tinggi-badan" name="input-tinggi-badan" required>
+                </div>
+
+                <div>
+                    <button type="button" id="hitung">Hitung BMI</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+
+         </section>
+
+            <!-- Result -->
+            <h2 class="subjudul" style="text-align: center;">Hasil</h2>
+            <div class="result" id="result" style="display: block;"></div>
+            
+
+    </main>
+
+    <footer>
+        <p style="margin: 0;">&copy; 2025 Made by Feby. Kalkulator BMI</p>
+    </footer>
+</body>
+
+</html>
