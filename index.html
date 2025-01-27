@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI</title>
-    <link rel="stylesheet" href="css\styles.css">
+    <link rel="stylesheet" href="css\style.css">
     <script defer src="js\script.js"></script>
 </head>
 
@@ -31,7 +31,7 @@
                 <header>
                     <h3 style="margin: 5px;">Keunggulan Fitur</h3>
                 </header>
-                <ol style="margin: 0;">
+                <ol id="keunggulanfeature" style="margin: 0;">
                     <li>Menghitung berat badan</li>
                     <li>Memberikan indikasi umum tentang status berat badan seseorang</li>
                     <li>Memantau risiko terhadap penyakit terkait berat badan</li>
@@ -41,10 +41,10 @@
                    hasil BMI ini sebagai acuan. Pastikan untuk tidak mengambil 
                    tindakan apa pun berdasarkan nilai BMI tanpa berkonsultasi 
                    terlebih dahulu dengan tenaga medis yang berkompeten seperti dokter, ya!</p>
-                <p style="text-align: justify;">Kalkultor akan memberi Anda gambaran tentang perbandingan 
-                   berat badan Anda dengan nilai umum. Indeks Massa Tubuh (BMI) 
-                   dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan 
-                   kuadrat tinggi badan Anda (dalam meter) atau BMI = Kg/M<sup>2</sup>.</p>
+                <p style="text-align: justify;">Kalkultor akan memberimu gambaran tentang perbandingan 
+                   berat badanmu dengan nilai umum. Indeks Massa Tubuh (BMI) 
+                   dihitung sebagai berat badan (dalam kilogram) dibagi dengan 
+                   kuadrat tinggi badan (dalam meter) atau BMI = Kg/M<sup>2</sup>.</p>
             </article>
 
             <!-- Form -->
@@ -56,18 +56,18 @@
                     <input type="radio" name="gender" value="Wanita"> Wanita
                 </div>
                 <div class="form-group">
-                    <label for="input-berat-badan">Berat Badan (kg)</label>
-                    <input type="number" id="input-berat-badan" name="input-berat-badan" required>
+                    <label for="weight">Berat Badan (kg)</label>
+                    <input type="number" id="weight" name="weight" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="input-usia">Usia (tahun)</label>
-                    <input type="number" id="input-usia" name="input-usia" required>
+                    <label for="age">Usia (tahun)</label>
+                    <input type="number" id="age" name="age" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="input-tinggi-badan">Tinggi Badan (cm)</label>
-                    <input type="number" id="input-tinggi-badan" name="input-tinggi-badan" required>
+                    <label for="height">Tinggi Badan (cm)</label>
+                    <input type="number" id="height" name="height" required>
                 </div>
 
                 <div>
@@ -79,15 +79,59 @@
          </section>
 
             <!-- Result -->
-            <h2 class="subjudul" style="text-align: center;">Hasil</h2>
-            <div class="result" id="result" style="display: block;"></div>
-            
+            <div class="result" id="result">
+                 <h2 id="hiddenresult" style="text-align: center;">Hasil</h2>
+                 <p id="bmiGender" style="margin: 0"></p>
+                 <div class="status">
+                    <h3 id="bmiStatus"></h3>
+                    <h1 id="bmiValue">0</h1>
+                 </div>
+                 <div class="van">
+                    <p id="bmiValueBottom"></p>
+                    <p id="bmiAdvice"></p>
+                 </div>
+                 <div class="content">
+                    <div id="underweight" style="display: none;">
+                        <h4>Berat rendah dapat menyebabkan berbagai masalah penyakit</h4>
+                        <ol>
+                            <li>Infertilitas</li>
+                            <li>Anemia</li>
+                            <li>Osteoporosis</li>
+                            <li>Sistem imun lemah</li>
+                        </ol>
+                    </div>
+                    <div id="normal" style="display: none;">
+                        <h4>Beberapa Langkah untuk Menjaga Berat Badan Tetap Ideal</h4>
+                        <ol>
+                            <li>Menjaga pola makan yang seimbang</li>
+                            <li>Rutin berolahraga</li>
+                            <li>Istirahat yang cukup</li>
+                            <li>Mengelola stres</li>
+                        </ol>
+                    </div>
+                    <div id="overweight" style="display: none;">
+                        <h4>Beberapa penyakit yang berasal dari obesitas</h4>
+                        <ol>
+                            <li>Diabetes</li>
+                            <li>Hipertensi</li>
+                            <li>Sakit Jantung</li>
+                            <li>Osteoarthritis</li>
+                        </ol>
+                    </div>
+                 </div>
+                   <div class="note">
+                    <p id="bmiNote"></p></div>
 
+                    <div>
+                    <a href="https://www.halodoc.com/tanya-dokter/kategori/spesialis-gizi-klinik?af_sub1=sub%201&af_force_deeplink=true&af_cost_value=0&source_caller=bulk&pid=Web&is_retargeting=true&af_click_lookback=7d&shortlink=n5jecetf&af_adset=https:%2F%2Fwww.halodoc.com%2Fartikel%2Fini-rekomendasi-dokter-gizi-di-halodoc-yang-bisa-dihubungi&af_ad=Web_kategori_article&af_channel=Organic&af_cost_currency=USD&c=DoctorReco" class="button2">Konsultasi ke HaloDoc</a>
+                    <a href="https://www.halodoc.com/rumah-sakit" class="button2">Registrasi Online Sekarang</a>
+                   </div>
+                </div>
+            </main>    
     </main>
 
     <footer>
         <p style="margin: 0;">&copy; 2025 Made by Feby. Kalkulator BMI</p>
     </footer>
 </body>
-
 </html>
