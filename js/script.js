@@ -27,7 +27,7 @@ document.getElementById("hitung").addEventListener("click", function () {
     // Menampilkan informasi BMI
     bmiGender.textContent = `BMI untuk ${gender}`;
     bmiValue.textContent = `${bmi}`;
-    bmiNote.textContent = "BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.";
+    bmiNote.textContent = "Hasil perhitungan Kalkulator BMI ini hanya digunakan sebagai informasi mengenai berat badan. Selalu konsultasikan kepada tenaga medis profesional untuk mendapatkan hasil yang lebih akurat, informasi kesehatan, dan tindakan medis yang tepat.";
 
     // Reset elemen-elemen
     underweight.style.display = "none"; // Reset elemen
@@ -39,22 +39,22 @@ document.getElementById("hitung").addEventListener("click", function () {
         underweight.style.display = "block"; // Tampilkan underweight
         bmiStatus.textContent = "Berat badan kurang";
         bmiValueBottom.textContent = "Hasil BMI kurang dari 18.5";
-        bmiAdvice.textContent = "Anda berada dalam kategori underweight atau berat badan kurang. Disarankan untuk meningkatkan asupan kalori dan berkonsultasi dengan ahli gizi.";
+        bmiAdvice.textContent = "Kamu tergolong dalam kategori underweight atau berat badan kurang. Sebagai solusinya, kamu membutuhkan asupan kalori tambahan sebanyak 300-500 kkal per hari. Perbaiki juga pola makan dan pola hidup untuk mendapatkan berat badan ideal.";
     } else if(bmi >= 18.5 && bmi <= 24.9) {
         normal.style.display = "block"; // Tampilkan normal
         bmiStatus.textContent = "Berat badan ideal";
         bmiValueBottom.textContent = "Hasil BMI diantara 18.5 dan 22.9";
-        bmiAdvice.textContent = "Anda berada dalam kategori berat badan yang normal. Tetap pertahankan berat badan Anda dan jaga berat badan Anda dengan mengatur keseimbangan antara pola makan dan aktivitas fisik Anda.";
+        bmiAdvice.textContent = "Kamu tergolong dalam kategori berat badan yang normal. Tetap jalankan pola hidup sehat dan pastikan untuk menyeimbangkan antara energi yang masuk dengan energi yang dikeluarkan.";
     } else if (bmi >= 25 && bmi <= 29.9) {
         overweight.style.display = "block"; // Tampilkan overweight
         bmiStatus.textContent = "Berat badan lebih";
         bmiValueBottom.textContent = "Hasil BMI di antara 25 - 29.9";
-        bmiAdvice.textContent = "Anda berada dalam kategori overweight atau berat badan berlebih. Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalor makanan yang dikonsumsi dan berolahraga. Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal.";
+        bmiAdvice.textContent = "Kamu tergolong dalam kategori overweight atau berat badan berlebih. Cobalah lebih memperhatikan kalori dari makanan dan minuman yang kamu konsumsi. Bukan hanya mengurangi asupan kalori, penurunan berat badan juga dapat tercapai dengan rutin berolahraga.";
     } else {
         overweight.style.display = "block"; // Tampilkan overweight
         bmiStatus.textContent = "Obesitas";
         bmiValueBottom.textContent = "Hasil BMI lebih dari 30.0";
-        bmiAdvice.textContent = "Anda berada dalam kategori obesitas. Usahakan untuk menurunkan berat badan dan menerapkan pola hidup sehat dengan menjaga makan dan aktivitas fisik. Segera kunjungi dokter untuk dilakukan pemeriksaan kesehatan lanjutan untuk mengetahui risiko yang Anda miliki terkait berat badan Anda.";
+        bmiAdvice.textContent = "Kamu tergolong dalam kategori obesitas. Usahakan untuk menurunkan berat badan dan menerapkan pola hidup sehat dengan menjaga makan dan aktivitas fisik. Segera kunjungi dokter untuk dilakukan pemeriksaan kesehatan lanjutan untuk mengetahui risiko yang kamu miliki terkait berat badan kamu.";
     }
 
     // Tampilkan hasil BMI
